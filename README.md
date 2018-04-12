@@ -8,7 +8,7 @@ SDDM 0.17
 
 ### Installing
 The easiest way to install this theme is through the KDE system configuration dialog. This requires the `sddm-kcm` package to be installed. If in doubt use your package manager to search and if necessary install `sddm-kcm` first.  
-Go to **`System Settings > Startup and Shutdown > Login Screen (SDDM) > Get New Theme`** and search for NixOS.
+Go to `System Settings > Startup and Shutdown > Login Screen (SDDM) > Get New Theme` and search for NixOS.
 
 ### Manually
 Go to [openDesktop.org](https://www.opendesktop.org/p/1214121), download the file and extract the contents to the theme directory of the SDDM manager (change the path for the downloaded file if necessary):
