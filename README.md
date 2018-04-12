@@ -1,3 +1,5 @@
+![Screenshot of the theme](preview.png "Preview")
+
 # NixOS login theme for KDE Plasma
 
 Your desktop just got a real make up with this awesome login screen. NixOS reduces the clutter of your greeter and leaves you with a clean, easy to use, login interface with a modern yet classy touch.
