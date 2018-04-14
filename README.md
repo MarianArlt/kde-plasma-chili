@@ -35,7 +35,7 @@ You might see some grey pixels around your avatar image which is caused by the c
 
 ### License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the GPLv3 License - see the [LICENSE](LICENSE.md) for details
 
 ### Acknowledgments
 
