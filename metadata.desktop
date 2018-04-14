@@ -2,7 +2,7 @@
 Name=NixOS
 Description[x-test]=xxNixOS Login Themexx
 Author=Marian Alexander Arlt
-License=MIT
+License=GPLv3
 Type=sddm-theme
 Version=0.4.0
 Website=https://github.com/MarianArlt/nixos-sddm-theme
