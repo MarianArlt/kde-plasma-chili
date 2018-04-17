@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.4.1] - 2018-04-16
+
+### Changed
+- Fixed bug where the system icons won't work
+
 ## [0.4.0] - 2018-04-12
 
 ### Added
