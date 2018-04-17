@@ -30,7 +30,7 @@ Item {
     signal clicked
 
     activeFocusOnTab: true
-    opacity: mouseArea.containsMouse ? 1 : 0.8
+    opacity: mouseArea.containsMouse ? 1 : 0.6
     property int iconSize: units.gridUnit * 2
 
     implicitWidth: Math.max(iconSize + units.largeSpacing * 3, label.contentWidth)
