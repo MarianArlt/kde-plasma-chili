@@ -27,14 +27,14 @@ Item {
     property alias iconSource: icon.source
     property alias containsMouse: mouseArea.containsMouse
     property alias font: label.font
-    property int iconSize: units.gridUnit * 2
     signal clicked
 
     activeFocusOnTab: true
     opacity: mouseArea.containsMouse ? 1 : 0.8
+    property int iconSize: units.gridUnit * 2
 
     implicitWidth: Math.max(iconSize + units.largeSpacing * 3, label.contentWidth)
-    implicitHeight: Math.max(iconSize + units.smallSpacing, label.implicitHeight)
+    implicitHeight: iconSize + units.smallSpacing, label.implicitHeight
 
     PlasmaCore.IconItem {
         id: icon
@@ -43,13 +43,14 @@ Item {
             horizontalCenter: parent.horizontalCenter
         }
         anchors.topMargin: height / 2
-        // width: mainStack.parent.height / 18
-        // height: mainStack.parent.height / 18
+
         width: iconSize
         height: iconSize
+
         colorGroup: PlasmaCore.ColorScope.colorGroup
         active: mouseArea.containsMouse || root.activeFocus
     }
+
     PlasmaComponents.Label {
         id: label
         font.family: "Noto Sans"
@@ -70,8 +71,8 @@ Item {
     MouseArea {
         id: mouseArea
         hoverEnabled: true
+        onClicked: root.clicked()
         anchors.fill: icon
-        onClicked: icon.clicked()
     }
 
     Keys.onEnterPressed: clicked()
