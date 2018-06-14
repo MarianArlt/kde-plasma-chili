@@ -1,30 +1,34 @@
-![Screenshot of the theme](preview.png "Preview")
+<!-- ![Screenshot of the theme](preview.png "Preview") -->
 
-# NixOS login theme for KDE Plasma
+# Chili login theme for KDE Plasma
 
-Your desktop just got a real make up with this awesome login screen. NixOS reduces the clutter of your greeter and leaves you with a clean, easy to use, login interface with a modern yet classy touch.
+Chili is hot, just like a real chili! Spice up the login experience for your users, your family and yourself. Chili reduces all the clutter and leaves you with a clean, easy to use, login interface with a modern yet classy touch.
+
+Chili for [KDE Plasma](https://www.kde.org/plasma-desktop) is the desktop environment *specific* version with *enhanced functionality* . If you don't use Plasma as your desktop environment you would likely prefer [Chili for SDDM](https://github.com/MarianArlt/sddm-chili).
 
 ### Prerequisites
-KDE Plasma 5.12  
-SDDM 0.17
 
-### Installing
-Go to `System Settings > Startup and Shutdown > Login Screen (SDDM) > Get New Theme` and search for NixOS.  
+KDE Plasma 5  
+SDDM
+
+### Installing the theme
+
+Go to `System Settings > Startup and Shutdown > Login Screen (SDDM) > Get New Theme` and search for "Chili for KDE".  
 This requires the `sddm-kcm` package to be installed. If in doubt use your package manager to search and if necessary install `sddm-kcm` first.  
 
-
 ### Manually
-Go to [openDesktop.org](https://www.opendesktop.org/p/1214121), download the file and extract the contents to the theme directory of the SDDM manager (change the path for the downloaded file if necessary):
+
+Go to [openDesktop.org](https://www.opendesktop.org/p/1214121), download the tar archive and extract the contents to the theme directory of the SDDM manager (change the path for the downloaded file if necessary):
 ```
-$ sudo tar -xzvf ~/Downloads/nixos-sddm.tar.gz -C /usr/share/sddm/themes
+$ sudo tar -xzvf ~/Downloads/kde-plasma-chili.tar.gz -C /usr/share/sddm/themes
 ```
-This will extract all the files to a folder called nixos inside of the themes directory of SDDM. After that you will have to point SDDM to the new theme by editing its config file:
+This will extract all the files to a folder called plasma-chili inside of the themes directory of SDDM. After that you will have to point SDDM to the new theme by editing its config file:
 ```
 $ sudo nano /usr/lib/sddm/sddm.conf.d/sddm.conf
 ```
-In the `[Theme]` section set `Current=nixos`. For a more detailed description please refer to the [Arch wiki on sddm](https://wiki.archlinux.org/index.php/SDDM).
+In the `[Theme]` section set `Current=plasma-chili`. For a more detailed description please refer to the [Arch wiki on sddm](https://wiki.archlinux.org/index.php/SDDM). Note that, depending on your system setup, a duplicate configuration may exist in `/etc/sddm.conf`. Usually this path takes preference so you want to set the above line in this file if you have it.
 
-### How to tweak
+### Theming the theme
 I consider this theme to be visually balanced and appealing as it is.
 
 That said if you still want to tweak fonts and their sizes search these files for "font.family" and "font.pointSize" and change their respective values where you feel need. Be aware that the upper right corner consists of the following elements: KeyboardButton.qml, Battery.qml and Clock.qml. So if you change any of these in size you may want to adapt the others as well.
