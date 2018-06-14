@@ -72,7 +72,7 @@ Item {
         id: mouseArea
         hoverEnabled: true
         onClicked: root.clicked()
-        anchors.fill: icon
+        anchors.fill: parent
     }
 
     Keys.onEnterPressed: clicked()
