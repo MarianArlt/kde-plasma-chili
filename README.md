@@ -29,13 +29,21 @@ $ sudo nano /usr/lib/sddm/sddm.conf.d/sddm.conf
 In the `[Theme]` section set `Current=plasma-chili`. For a more detailed description please refer to the [Arch wiki on sddm](https://wiki.archlinux.org/index.php/SDDM). Note that, depending on your system setup, a duplicate configuration may exist in `/etc/sddm.conf`. Usually this path takes preference so you want to set the above line in this file if you have it.
 
 ### Theming the theme
-I consider this theme to be visually balanced and appealing as it is.
 
-That said if you still want to tweak fonts and their sizes search these files for "font.family" and "font.pointSize" and change their respective values where you feel need. Be aware that the upper right corner consists of the following elements: KeyboardButton.qml, Battery.qml and Clock.qml. So if you change any of these in size you may want to adapt the others as well.
+Chili is now customizable through its `theme.conf` file. You can now alter the intensity of the background blur or even not have any blur at all! Also there may be screens so big that the avatar just not looks correct. Change it in the config to something that better suits your screen!
 
-You can also change the weight of the blur filter effect by searching for "RecursiveBlur" in the Background.qml file and altering the values "radius" and "loops". Refer to the [Qt documentation](http://doc.qt.io/qt-5/qml-qtgraphicaleffects-recursiveblur.html) for more details.
+  * Change the path of the background image relative to the themes directory:
+  `background=components/artwork/background.jpg`
 
-You might see some grey pixels around your avatar image which is caused by the color of the opacity mask blending with the anti-aliasing of the Qt blur effect in use. You may change the fill color of the mask that resides in "components/artwork/mask.svg" to a color that better matches with your avatar colors. Do not change the opacity of the mask. Take note that this might affect other avatar images present on your system.
+  * Disable blur or play around with its intensity:
+  `blur=true`
+  `recursiveBlurLoops=40`
+  `recursiveBlurRadius=4`
+
+  * Adjust the size of the user image:
+  `changeAvatarPixelSize=`
+
+You might see some grey pixels around your user image which is caused by the the anti-aliasing of the opacity mask. You may change the fill color of the mask that resides in `components/artwork/mask.svg` to a color that better matches with your user images colors. Do **not** change the *opacity* of the mask. Take note that this might affect other user images with different colors present on your system.
 
 ### License
 
