@@ -37,7 +37,7 @@ Item {
     property bool constrainText: true
     signal clicked()
 
-    property real faceSize: Math.min(width, height - usernameDelegate.height - units.smallSpacing)
+    property real faceSize: config.changeAvatarPixelSize ? config.changeAvatarPixelSize : Math.min(width, height - usernameDelegate.height - units.smallSpacing)
 
     opacity: isCurrent ? 1.0 : 0.3
 
@@ -52,10 +52,10 @@ Item {
         width: faceSize
         height: faceSize
         anchors {
-            top: parent.top
+            bottom: usernameDelegate.top
             horizontalCenter: parent.horizontalCenter
         }
-        anchors.topMargin: - usernameDelegate.height * 0.5
+        anchors.bottomMargin: usernameDelegate.height * 0.5
 
         //Image takes priority, taking a full path to a file, if that doesn't exist we show an icon
         Image {
