@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.0] - 2018-06-13
+
+### Changed
+- The whole theme got renamed to avoid confusion with the NixOS linux distribution
+- Fixed the keyboard layout button label getting cut off. It is now image only.
+- The power buttons now also trigger when clicked on their respective labels.
+- The background blur can now be deactivated or altered in intensity with variables in the config file.
+
 ## [0.4.1] - 2018-04-16
 
 ### Changed
