@@ -1,15 +1,15 @@
 [SddmGreeterTheme]
-Name=NixOS
-Description[x-test]=xxNixOS Login Themexx
+Name=Chili for Plasma
+Description=The hottest login theme around for KDE Plasma
 Author=Marian Alexander Arlt
 License=GPLv3
 Type=sddm-theme
-Version=0.4.1
-Website=https://github.com/MarianArlt/nixos-sddm-theme
+Version=0.5.0
+Website=https://github.com/MarianArlt/kde-plasma-chili
 Screenshot=preview.png
 MainScript=Main.qml
 ConfigFile=theme.conf
 TranslationsDirectory=translations
 Email=marianarlt@icloud.com
-Theme-Id=nixos
+Theme-Id=plasma-chili
 Theme-API=2.0
