@@ -1,4 +1,4 @@
-<!-- ![Screenshot of the theme](preview.png "Preview") -->
+![Screenshot of the theme](preview.png "Preview")
 
 # Chili login theme for KDE Plasma
 
