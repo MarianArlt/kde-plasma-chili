@@ -30,11 +30,11 @@ Item {
     signal clicked
 
     activeFocusOnTab: true
-    opacity: mouseArea.containsMouse ? 1 : 0.6
+    opacity: containsMouse ? 1 : 0.6
     property int iconSize: units.gridUnit * 2
 
-    implicitWidth: Math.max(iconSize + units.largeSpacing * 3, label.contentWidth)
-    implicitHeight: iconSize + units.smallSpacing, label.implicitHeight
+    implicitWidth: Math.max(icon.implicitWidth + units.largeSpacing * 3, label.contentWidth)
+    implicitHeight: Math.max(icon.implicitHeight + units.largeSpacing * 2, label.contentHeight)
 
     PlasmaCore.IconItem {
         id: icon
@@ -42,7 +42,6 @@ Item {
             top: parent.top
             horizontalCenter: parent.horizontalCenter
         }
-        anchors.topMargin: height / 2
 
         width: iconSize
         height: iconSize
@@ -72,7 +71,7 @@ Item {
         id: mouseArea
         hoverEnabled: true
         onClicked: root.clicked()
-        anchors.fill: parent
+        anchors.fill: root
     }
 
     Keys.onEnterPressed: clicked()
