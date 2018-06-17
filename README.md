@@ -8,17 +8,17 @@ Chili for [KDE Plasma](https://www.kde.org/plasma-desktop) is the desktop enviro
 
 ### Prerequisites
 
-KDE Plasma 5  
+KDE Plasma 5
 SDDM
 
 ### Installing the theme
 
-Go to `System Settings > Startup and Shutdown > Login Screen (SDDM) > Get New Theme` and search for "Chili for KDE".  
-This requires the `sddm-kcm` package to be installed. If in doubt use your package manager to search and if necessary install `sddm-kcm` first.  
+Go to `System Settings > Startup and Shutdown > Login Screen (SDDM) > Get New Theme` and search for "Chili for KDE".
+This requires the `sddm-kcm` package to be installed. If in doubt use your package manager to search and if necessary install `sddm-kcm` first.
 
 ### Manually
 
-Go to [openDesktop.org](https://www.opendesktop.org/p/1214121), download the tar archive and extract the contents to the theme directory of the SDDM manager (change the path for the downloaded file if necessary):
+[Download the tar archive from openDesktop](https://www.opendesktop.org/p/1214121) and extract the contents to the theme directory of the SDDM manager (change the path for the downloaded file if necessary):
 ```
 $ sudo tar -xzvf ~/Downloads/kde-plasma-chili.tar.gz -C /usr/share/sddm/themes
 ```
