@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.5.1] - 2018-06-16
+
+### Changed
+- Further improvement for the power buttons
+- Sane blur defaults
+
 ## [0.5.0] - 2018-06-13
 
 ### Changed
