@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.5.2] - 2018-07-22
+
+### Changed
+- Fixes a bug where power buttons hover area was off
+- The background now draws in a seperate QML item, this hopefully fixes a black screen for some people
+
 ## [0.5.1] - 2018-06-16
 
 ### Changed
@@ -10,9 +16,9 @@
 
 ### Changed
 - The whole theme got renamed to avoid confusion with the NixOS linux distribution
-- Fixed the keyboard layout button label getting cut off. It is now image only.
-- The power buttons now also trigger when clicked on their respective labels.
-- The background blur can now be deactivated or altered in intensity with variables in the config file.
+- Fixed the keyboard layout button label getting cut off. It is now image only
+- The power buttons now also trigger when clicked on their respective labels
+- The background blur can now be deactivated or altered in intensity with variables in the config file
 
 ## [0.4.1] - 2018-04-16
 
