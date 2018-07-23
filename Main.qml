@@ -46,11 +46,14 @@ PlasmaCore.ColorScope {
         connectedSources: "Caps Lock"
     }
 
-    Repeater {
-        model: screenModel
-
-        Background {
-            x: geometry.x; y: geometry.y; width: geometry.width; height: geometry.height
+    Item {
+        id: wallpaper
+        anchors.fill: parent
+        Repeater {
+            model: screenModel
+            Background {
+                x: geometry.x; y: geometry.y; width: geometry.width; height: geometry.height
+            }
         }
     }
 
