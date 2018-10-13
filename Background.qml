@@ -28,14 +28,14 @@ FocusScope {
         id: sceneImageBackground
         anchors.fill: parent
         fillMode: Image.PreserveAspectCrop
-        source: config.background
+        source: config.Background
         smooth: true
     }
 
     RecursiveBlur {
         anchors.fill: sceneImageBackground
         source: sceneImageBackground
-        radius: config.blur == "true" ? config.recursiveBlurRadius : 0
-        loops: config.blur == "true" ? config.recursiveBlurLoops : 0
+        radius: config.Blur == "true" ? config.RecursiveBlurRadius : 0
+        loops: config.Blur == "true" ? config.RecursiveBlurLoops : 0
     }
 }

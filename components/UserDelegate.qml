@@ -69,7 +69,7 @@ Item {
         }
         Image {
             id: mask
-            source: "artwork/mask.svgz"
+            source: config.UsePngInsteadOfMask == "true" ? "" : "artwork/mask.svgz"
             sourceSize: Qt.size(faceSize, faceSize)
             smooth: true
         }

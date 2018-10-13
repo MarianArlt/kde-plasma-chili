@@ -33,16 +33,16 @@ In the `[Theme]` section set `Current=plasma-chili`. For a more detailed descrip
 Chili is now **even more** customizable through its `theme.conf` file. You can alter the intensity of the background blur or even not have any blur at all! Have a custom password field to your likings! Also there may be screens so big that the avatar just not looks correct. Change it in the config to something that better suits your screen!
 
   * Change the path of the background image relative to the themes directory:
-  `background=components/artwork/background.jpg`
+  `Background=components/artwork/background.jpg`
 
   * Set the real screen size if anything looks odd:  
   `ScreenWidth=1366`  
   `ScreenHeight=768`  
 
   * Disable blur or play around with its intensity:  
-  `blur=true`  
-  `recursiveBlurLoops=40`  
-  `recursiveBlurRadius=4`  
+  `Blur=true`  
+  `RecursiveBlurLoops=40`  
+  `RecursiveBlurRadius=4`  
 
   * Customize the password input field:  
   `HidePasswordRevealIcon=true`  
@@ -54,14 +54,17 @@ Chili is now **even more** customizable through its `theme.conf` file. You can a
   * Adjust sizes of the themes components (Dangerous! Integers without unit!):  
   `PowerIconSize=`  
   `FontPointSize=`  
-  `changeAvatarPixelSize=`  
+  `AvatarPixelSize=`  
+
+  * Don't rely on a circle for your avatar. Instead use a png with transparency as your .face file:
+  `UsePngInsteadOfMask=false`  
 
   * Translate the power buttons if your language isn't available by default:  
-  `translationSuspend=`  
-  `translationReboot=`  
-  `translationPowerOff=`  
+  `TranslationSuspend=`  
+  `TranslationReboot=`  
+  `TranslationPowerOff=`  
 
-You might see some grey pixels around your user image which is caused by the the anti-aliasing of the opacity mask. You may change the fill color of the mask that resides in `components/artwork/mask.svg` to a color that better matches with your user images colors. Do **not** change the *opacity* of the mask. Take note that this might affect other user images with different colors present on your system.
+You might see some grey pixels around your user image which is caused by the the anti-aliasing of the opacity mask. You may change the fill color of the mask that resides in `components/artwork/mask.svg` to a color that better matches with your user images colors. Do **not** change the *opacity* of the mask. Take note that this might affect other user images with different colors present on your system. As of version 0.5.3 you can also use a PNG file with transparency instead. To do so set the before mentioned option.
 
 ### License
 

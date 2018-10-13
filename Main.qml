@@ -127,7 +127,7 @@ PlasmaCore.ColorScope {
             actionItems: [
                 ActionButton {
                     iconSource: "system-suspend"
-                    text: config.translationSuspend ? config.translationSuspend : i18nd("plasma_lookandfeel_org.kde.lookandfeel","Suspend")
+                    text: config.TranslationSuspend ? config.TranslationSuspend : i18nd("plasma_lookandfeel_org.kde.lookandfeel","Suspend")
                     onClicked: sddm.suspend()
                     enabled: sddm.canSuspend
                     visible: !inputPanel.keyboardActive
@@ -135,7 +135,7 @@ PlasmaCore.ColorScope {
                 },
                 ActionButton {
                     iconSource: "system-reboot"
-                    text: config.translationReboot ? config.translationReboot : i18nd("plasma_lookandfeel_org.kde.lookandfeel","Restart")
+                    text: config.TranslationReboot ? config.TranslationReboot : i18nd("plasma_lookandfeel_org.kde.lookandfeel","Restart")
                     onClicked: sddm.reboot()
                     enabled: sddm.canReboot
                     visible: !inputPanel.keyboardActive
@@ -143,7 +143,7 @@ PlasmaCore.ColorScope {
                 },
                 ActionButton {
                     iconSource: "system-shutdown"
-                    text: config.translationPowerOff ? config.translationPowerOff : i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shutdown")
+                    text: config.TranslationPowerOff ? config.TranslationPowerOff : i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shutdown")
                     onClicked: sddm.powerOff()
                     enabled: sddm.canPowerOff
                     visible: !inputPanel.keyboardActive
