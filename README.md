@@ -48,7 +48,7 @@ Chili is now **even more** customizable through its `theme.conf` file. You can a
   `HidePasswordRevealIcon=true`  
   `PasswordFieldOutlined=false`  
   `PasswordFieldCharacter=`  
-  *Here are some funny ones you can copy: ⁙ ⁕ ○ █ ©*   
+  `## The character shown when your password is hidden. Here are some funny ones you can copy: ⁙ ⁕ ○ █ ©`  
   `PasswordFieldPlaceholderText=Password`  
 
   * Adjust sizes of the themes components (dangerous! full integers!):  
