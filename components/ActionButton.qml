@@ -31,7 +31,7 @@ Item {
 
     activeFocusOnTab: true
     opacity: ( containsMouse || activeFocus ) ? 1 : 0.6
-    property int iconSize: units.gridUnit * 2
+    property int iconSize
 
     implicitWidth: Math.max(icon.implicitWidth + units.largeSpacing * 3, label.contentWidth)
     implicitHeight: Math.max(icon.implicitHeight + units.largeSpacing * 2, label.contentHeight)
@@ -43,8 +43,8 @@ Item {
             horizontalCenter: parent.horizontalCenter
         }
 
-        width: iconSize
-        height: iconSize
+        width: config.PowerIconSize ? config.PowerIconSize : iconSize
+        height: config.PowerIconSize ? config.PowerIconSize : iconSize
 
         colorGroup: PlasmaCore.ColorScope.colorGroup
         active: mouseArea.containsMouse || root.activeFocus

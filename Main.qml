@@ -32,10 +32,12 @@ PlasmaCore.ColorScope {
     id: root
     colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
 
-    width: 1600
-    height: 900
+    width: config.ScreenWidth
+    height: config.ScreenHeight
 
     property string notificationMessage
+    property string generalFontColor: "white"
+    property int generalFontSize: config.FontPointSize ? config.FontPointSize : root.height / 75
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
@@ -66,6 +68,7 @@ PlasmaCore.ColorScope {
         }
         anchors.rightMargin: 14
         anchors.topMargin: 10
+        clockSize: root.generalFontSize
     }
 
 
@@ -95,6 +98,10 @@ PlasmaCore.ColorScope {
             userListModel: userModel
             userListCurrentIndex: userModel.lastIndex >= 0 ? userModel.lastIndex : 0
             lastUserName: userModel.lastUser
+            
+            usernameFontSize: root.generalFontSize
+            usernameFontColor: root.generalFontColor
+
             showUserList: {
                 if ( !userListModel.hasOwnProperty("count")
                 || !userListModel.hasOwnProperty("disableAvatarsThreshold"))
@@ -120,24 +127,27 @@ PlasmaCore.ColorScope {
             actionItems: [
                 ActionButton {
                     iconSource: "system-suspend"
-                    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Suspend")
+                    text: config.translationSuspend ? config.translationSuspend : i18nd("plasma_lookandfeel_org.kde.lookandfeel","Suspend")
                     onClicked: sddm.suspend()
                     enabled: sddm.canSuspend
                     visible: !inputPanel.keyboardActive
+                    iconSize: root.generalFontSize * 4.25
                 },
                 ActionButton {
                     iconSource: "system-reboot"
-                    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Restart")
+                    text: config.translationReboot ? config.translationReboot : i18nd("plasma_lookandfeel_org.kde.lookandfeel","Restart")
                     onClicked: sddm.reboot()
                     enabled: sddm.canReboot
                     visible: !inputPanel.keyboardActive
+                    iconSize: root.generalFontSize * 4.25
                 },
                 ActionButton {
                     iconSource: "system-shutdown"
-                    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shutdown")
+                    text: config.translationPowerOff ? config.translationPowerOff : i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shutdown")
                     onClicked: sddm.powerOff()
                     enabled: sddm.canPowerOff
                     visible: !inputPanel.keyboardActive
+                    iconSize: root.generalFontSize * 4.25
                 }
             ]
 
@@ -318,6 +328,7 @@ PlasmaCore.ColorScope {
 
         SessionButton {
             id: sessionButton
+            sessionFontSize: root.generalFontSize
         }
 
     }

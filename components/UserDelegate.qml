@@ -37,7 +37,7 @@ Item {
     property bool constrainText: true
     signal clicked()
 
-    property real faceSize: config.changeAvatarPixelSize ? config.changeAvatarPixelSize : Math.min(width, height - usernameDelegate.height - units.smallSpacing)
+    property real faceSize: config.AvatarPixelSize ? config.AvatarPixelSize : Math.min(width, height - usernameDelegate.height - units.smallSpacing)
 
     opacity: isCurrent ? 1.0 : 0.3
 
@@ -93,7 +93,7 @@ Item {
     PlasmaComponents.Label {
         id: usernameDelegate
         font.family: "Noto Sans"
-        font.pointSize: root.height / 60
+        font.pointSize: config.FontPointSize ? config.FontPointSize * 1.2 : root.height / 80 * 1.2
         renderType: Text.QtRendering
         font.capitalization: Font.Capitalize
         anchors {

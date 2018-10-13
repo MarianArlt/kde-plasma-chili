@@ -27,10 +27,11 @@ import QtQuick.Controls 1.3 as QQC
 PlasmaComponents.ToolButton {
     id: root
     property int currentIndex: -1
+    property int sessionFontSize
 
     visible: menu.items.length > 1
     font.family: "Noto Sans"
-    font.pointSize: footer.parent.height / 75
+    font.pointSize: sessionFontSize
 
     text: instantiator.objectAt(currentIndex).text || ""
 

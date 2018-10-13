@@ -10,8 +10,11 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 SessionManagementScreen {
 
     property bool showUsernamePrompt: !showUserList
-
+    property int usernameFontSize
+    property string usernameFontColor
     property string lastUserName
+    property bool passwordFieldOutlined: config.PasswordFieldOutlined == "true"
+    property bool hidePasswordRevealIcon: config.HidePasswordRevealIcon == "false"
 
     //the y position that should be ensured visible when the on screen keyboard is visible
     property int visibleBoundary: mapFromItem(loginButton, 0, 0).y
@@ -43,10 +46,10 @@ SessionManagementScreen {
     PlasmaComponents.TextField {
         id: userNameInput
         Layout.fillWidth: true
-        Layout.minimumHeight: 24
+        Layout.minimumHeight: 21
         implicitHeight: root.height / 28
         font.family: "Noto Sans"
-        font.pointSize: root.height / 75
+        font.pointSize: usernameFontSize
         opacity: 0.5
         text: lastUserName
         visible: showUsernamePrompt
@@ -63,21 +66,28 @@ SessionManagementScreen {
 
     PlasmaComponents.TextField {
         id: passwordBox
+        
         Layout.fillWidth: true
-        Layout.minimumHeight: 24
-        implicitHeight: root.height / 28
+        Layout.minimumHeight: 21
+        implicitHeight: usernameFontSize * 2.85
+        font.pointSize: usernameFontSize * 0.8
+        opacity: passwordFieldOutlined ? 0.75 : 0.5
         font.family: "Noto Sans"
-        font.pointSize: root.height / 85
-        opacity: 0.5
-        placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Password")
+        placeholderText: config.PasswordFieldPlaceholderText == "Password" ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Password") : config.PasswordFieldPlaceholderText
         focus: !showUsernamePrompt || lastUserName
         echoMode: TextInput.Password
+        revealPasswordButtonShown: hidePasswordRevealIcon
         onAccepted: startLogin()
 
         style: TextFieldStyle {
-            textColor: "black"
+            textColor: passwordFieldOutlined ? "white" : "black"
+            placeholderTextColor: passwordFieldOutlined ? "white" : "black"
+            passwordCharacter: config.PasswordFieldCharacter == "" ? "●" : config.PasswordFieldCharacter
             background: Rectangle {
                 radius: 3
+                border.color: "white"
+                border.width: 1
+                color: passwordFieldOutlined ? "transparent" : "white"
             }
         }
 

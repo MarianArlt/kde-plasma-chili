@@ -30,18 +30,36 @@ In the `[Theme]` section set `Current=plasma-chili`. For a more detailed descrip
 
 ### Theming the theme
 
-Chili is now customizable through its `theme.conf` file. You can now alter the intensity of the background blur or even not have any blur at all! Also there may be screens so big that the avatar just not looks correct. Change it in the config to something that better suits your screen!
+Chili is now **even more** customizable through its `theme.conf` file. You can alter the intensity of the background blur or even not have any blur at all! Have a custom password field to your likings! Also there may be screens so big that the avatar just not looks correct. Change it in the config to something that better suits your screen!
 
   * Change the path of the background image relative to the themes directory:
   `background=components/artwork/background.jpg`
 
-  * Disable blur or play around with its intensity:
-  `blur=true`
-  `recursiveBlurLoops=40`
-  `recursiveBlurRadius=4`
+  * Set the real screen size if anything looks odd:  
+  `ScreenWidth=1366`  
+  `ScreenHeight=768`  
 
-  * Adjust the size of the user image:
-  `changeAvatarPixelSize=`
+  * Disable blur or play around with its intensity:  
+  `blur=true`  
+  `recursiveBlurLoops=40`  
+  `recursiveBlurRadius=4`  
+
+  * Customize the password input field:  
+  `HidePasswordRevealIcon=true`  
+  `PasswordFieldOutlined=false`  
+  `PasswordFieldCharacter=`  
+  *Here are some funny ones you can copy: ⁙ ⁕ ○ █ ©*   
+  `PasswordFieldPlaceholderText=Password`  
+
+  * Adjust the sizes of the theme (dangerous!):  
+  `PowerIconSize=`  
+  `FontPointSize=`  
+  `changeAvatarPixelSize=`  
+
+  * Translate the power buttons if your language isn't available by default:  
+  `translationSuspend=`  
+  `translationReboot=`  
+  `translationPowerOff=`  
 
 You might see some grey pixels around your user image which is caused by the the anti-aliasing of the opacity mask. You may change the fill color of the mask that resides in `components/artwork/mask.svg` to a color that better matches with your user images colors. Do **not** change the *opacity* of the mask. Take note that this might affect other user images with different colors present on your system.
 

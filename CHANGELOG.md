@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.5.3] - 2018-10-12
+
+### Changed
+- A lot of new options in theme.conf, see README for details
+
 ## [0.5.2] - 2018-07-22
 
 ### Changed
