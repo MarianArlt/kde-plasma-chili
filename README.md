@@ -8,7 +8,7 @@ Chili for [KDE Plasma](https://www.kde.org/plasma-desktop) is the desktop enviro
 
 ### Prerequisites
 
-KDE Plasma 5
+KDE Plasma 5  
 SDDM
 
 ### Installing the theme
@@ -51,7 +51,7 @@ Chili is now **even more** customizable through its `theme.conf` file. You can a
   *Here are some funny ones you can copy: ⁙ ⁕ ○ █ ©*   
   `PasswordFieldPlaceholderText=Password`  
 
-  * Adjust the sizes of the theme (dangerous!):  
+  * Adjust sizes of the themes components (dangerous! full integers!):  
   `PowerIconSize=`  
   `FontPointSize=`  
   `changeAvatarPixelSize=`  
