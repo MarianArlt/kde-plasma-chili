@@ -30,7 +30,7 @@ PlasmaComponents.ToolButton {
     property int sessionFontSize
 
     visible: menu.items.length > 1
-    font.family: "Noto Sans"
+    font.family: config.Font || "Noto Sans"
     font.pointSize: sessionFontSize
 
     text: instantiator.objectAt(currentIndex).text || ""

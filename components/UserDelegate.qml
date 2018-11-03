@@ -57,6 +57,16 @@ Item {
         }
         anchors.bottomMargin: usernameDelegate.height * 0.5
 
+        Rectangle {
+            id: outline
+            anchors.fill: parent
+            anchors.margins: -(config.AvatarOutlineWidth) || -2
+            color: "transparent"
+            border.width: config.AvatarOutlineWidth || 2
+            border.color: config.AvatarOutlineColor || "white"
+            radius: 1000
+            visible: config.AvatarOutline == "true" ? true : false
+        }
         //Image takes priority, taking a full path to a file, if that doesn't exist we show an icon
         Image {
             id: face
@@ -92,7 +102,7 @@ Item {
 
     PlasmaComponents.Label {
         id: usernameDelegate
-        font.family: "Noto Sans"
+        font.family: config.Font || "Noto Sans"
         font.pointSize: config.FontPointSize ? config.FontPointSize * 1.2 : root.height / 80 * 1.2
         renderType: Text.QtRendering
         font.capitalization: Font.Capitalize

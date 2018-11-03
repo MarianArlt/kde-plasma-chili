@@ -30,13 +30,13 @@ RowLayout {
     KeyboardButton {}
     Battery {}
     Label {
-        font.family: "Noto Sans"
+        font.family: config.Font || "Noto Sans"
         font.pointSize: clockSize
         text: Qt.formatDateTime(timeSource.data["Local"]["DateTime"], " ddd dd MMMM,")
         renderType: Text.QtRendering
     }
     Label {
-        font.family: "Noto Sans"
+        font.family: config.Font || "Noto Sans"
         font.pointSize: clockSize
         text: Qt.formatTime(timeSource.data["Local"]["DateTime"])
         renderType: Text.QtRendering

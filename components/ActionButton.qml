@@ -52,8 +52,8 @@ Item {
 
     PlasmaComponents.Label {
         id: label
-        font.family: "Noto Sans"
-        font.pointSize: mainStack.parent.height / 75
+        font.family: config.Font || "Noto Sans"
+        font.pointSize: config.FontPointSize || root.generalFontSize
         renderType: Text.QtRendering
         anchors {
             top: icon.bottom

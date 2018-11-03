@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.5.4] - 2018-11-03
+
+### Changed
+
+- Fixes a bug where "FontPointSize" would not affect the size of the power buttons labels
+- Added a new variable "Font" to hard set a specific font for your greeter
+- Added the option "AvatarOutline"" to make your Avatar Image appear with an outline
+- Options for the appearance of the outline: "AvatarOutlineColor" and "AvatarOutlineWidth"
+
 ## [0.5.3] - 2018-10-12
 
 ### Changed

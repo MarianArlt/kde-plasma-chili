@@ -2,9 +2,9 @@
 Name=Chili for Plasma
 Description=The hottest theme for KDE Plasma
 Author=Marian Alexander Arlt
-License=GPLv3
+License=GPL-3.0-or-later
 Type=sddm-theme
-Version=0.5.3
+Version=0.5.4
 Website=https://github.com/MarianArlt/kde-plasma-chili
 Screenshot=preview.png
 MainScript=Main.qml
