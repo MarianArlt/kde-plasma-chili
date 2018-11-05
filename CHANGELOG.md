@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.5.4] - 2018-11-05
+
+### Changed
+
+- Fixes a bug where a user set background from theme.conf.user wouldn't be read at all
+
 ## [0.5.4] - 2018-11-03
 
 ### Changed
