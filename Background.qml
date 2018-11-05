@@ -28,7 +28,7 @@ FocusScope {
         id: sceneImageBackground
         anchors.fill: parent
         fillMode: Image.PreserveAspectCrop
-        source: config.Background
+        source: config.background || config.Background
         smooth: true
     }
 
